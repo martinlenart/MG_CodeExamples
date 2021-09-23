@@ -14,13 +14,12 @@ namespace GetSet
 
     public struct PlayingCardStruct
     {
-        public PlayingCardColor Color { get; }
-        public PlayingCardValue Value { get; }
+        public PlayingCardColor Color { get; init; }
+        public PlayingCardValue Value { get; init; }
 
         public string StringToPrint()
         {
             string sRet = $"Card is of color {Color} and value {Value}";
-            Color = PlayingCardColor.Clubs;
             return sRet;
         }
         public PlayingCardStruct(bool myFavoriteOrWorst)
@@ -39,21 +38,41 @@ namespace GetSet
     }
     public class PlayingCardClass
     {
-        public PlayingCardColor Color;
-        public PlayingCardValue Value;
+        public PlayingCardColor Color { get; set; }
+        public PlayingCardValue Value { get; set; }
 
-        public string StringToPrint()
+        private bool _favoriteCard = false;
+        public bool FavoriteCard 
+        {   get { return _favoriteCard; }
+            private set { _favoriteCard = value;} 
+        }
+
+        public string StringToPrint
         {
-            string sRet = $"Card is of color {Color} and value {Value}";
-            return sRet;
+            get
+            {
+                string sRet = $"Card is of color {Color} and value {Value} and Favorite: {FavoriteCard}";
+                return sRet;
+            }
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            PlayingCardStruct sCard1;
-            Console.WriteLine("Hello World!");
+            PlayingCardStruct sCard1 = new PlayingCardStruct(true);
+            PlayingCardStruct sCard2 = new PlayingCardStruct(false);
+
+            PlayingCardStruct sCard3 = new PlayingCardStruct { Color = PlayingCardColor.Diamonds, Value = PlayingCardValue.Four };
+
+            Console.WriteLine(sCard1.StringToPrint());
+            Console.WriteLine(sCard2.StringToPrint());
+            Console.WriteLine(sCard3.StringToPrint());
+
+            PlayingCardClass cCard1 = new PlayingCardClass { Color = PlayingCardColor.Diamonds, Value = PlayingCardValue.Four };
+            cCard1.FavoriteCard = true;
+            Console.WriteLine(cCard1.FavoriteCard);
+            Console.WriteLine(cCard1.StringToPrint);
         }
     }
 }

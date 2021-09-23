@@ -82,6 +82,8 @@ namespace DeckOfCards
             {
                 for (PlayingCardValue value = PlayingCardValue.Two; value <= PlayingCardValue.Ace; value++)
                 {
+                    //Console.WriteLine($"cardNr: {cardNr1}  Color: {color}  Value: {value}");
+
                     //Alternative way as long as PlayingCard is a struct
                     deckOfCards[cardNr1].Color = color;
                     deckOfCards[cardNr1].Value = value;
