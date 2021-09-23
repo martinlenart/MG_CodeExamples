@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MG_CodeExample1", "MG_CodeE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{F551B7C7-1361-4352-9DFB-A979219B338C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructVsClass", "StructVsClass\StructVsClass.csproj", "{D036B1CD-0317-449E-B9B9-1957F787A763}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F551B7C7-1361-4352-9DFB-A979219B338C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F551B7C7-1361-4352-9DFB-A979219B338C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F551B7C7-1361-4352-9DFB-A979219B338C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D036B1CD-0317-449E-B9B9-1957F787A763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D036B1CD-0317-449E-B9B9-1957F787A763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D036B1CD-0317-449E-B9B9-1957F787A763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D036B1CD-0317-449E-B9B9-1957F787A763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
